@@ -1,0 +1,70 @@
+# topology and trajectory files, including folder
+
+topfile                                         ../ionized.psf
+trjfile                                         ../production.dcd
+
+
+# Support files location
+
+sourcedir                                       /home/tlacour/git/AIM/AIM/sourcefiles
+resnamesfile                                    resnames.dat
+atnamesfile                                     atnames_CHARMM.dat
+libfile                                         AIMV9-1.dylib
+use_c_lib                                       False
+
+
+
+# output files
+
+outdir                                          ./
+outfilename                                     Hamiltonian
+outdipfilename                                  Dipoles
+outposfilename                                  AtomPos
+outramfilename                                  Raman
+outparfilename                                  [now]AIM_[version]_Parameters.txt
+
+logdir                                          ./
+logfilename                                     [now]AIM_[version].log
+proffilename                                    [now]AIM_[version].pstats
+pngfilename                                     [now]AIM_[version].png
+
+
+
+# Output file settings
+output_format                                   bin
+output_type                                     Ham Dip Pos
+Verbose                                         2
+Verbose_log                                     3
+profiler                                        False
+pngout                                          False
+
+
+
+# Run Parameters
+
+influencers                                     All 
+oscillators                                     AmideBB AmideSC 
+apply_dd_coupling                               Same
+map_choice                                      Skinner
+Dipole_choice                                   Torii
+coupling_choice                                 TDCTasumi
+NN_coupling_choice                              GLDP
+AtomPos_choice                                  C
+start_frame                                     0
+nFrames_to_calculate                            999999999
+end_frame                                       50100
+max_time                                        999999
+SphereSize                                      18.0
+
+replicate_orig_AIM                              False
+NSA_toggle                                      True
+NSA_spheresize					20.0
+NSA_nframes					20
+
+atom_based_chainID                              True
+use_protein_specials                            True
+Scale_LRCoupling                                1.0
+
+Use_AmGroup_selection_criteria                  False
+
+TreatNN                                         True
